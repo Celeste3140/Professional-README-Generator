@@ -31,6 +31,23 @@ if (license != "n/a") {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## Description 
+  ${data.Description}
+
+  ## Usage 
+  ${data.Usage}
+
+  ## License 
+  ${data.License}
+
+  ## Contributing 
+  ${data.contributation}
+
+  ## Test
+  ${data.Test}
+
+  ## Contact 
+  ${contact}
 `;
 }
 

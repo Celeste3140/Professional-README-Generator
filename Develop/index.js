@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 var inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('../Develop/utils/generateMarkdown');
 // const { default: Choices } = require('inquirer/lib/objects/choices');
 // TODO: Create an array of questions for user input
 
@@ -23,7 +24,7 @@ inquirer.prompt ([
     },
     {
         type: "input",
-        name: "Use",
+        name: "Usage",
         message: "How do you use this?"
     },
     {
