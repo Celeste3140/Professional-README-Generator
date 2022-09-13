@@ -30,6 +30,7 @@ const questions = [
         name: "License",
         message: "Add your licenses! If not applicable then select 'none'.",
         choices: [
+            "n/a",
             "zLib License",
             "University of Illinois/NCSA Open Source License",
             "SIL Open Font License 1.1",
@@ -81,13 +82,13 @@ function writeToFile(fileName, data) {
             return console.log('Oops, something happened!');
         } else {
         console.log("README.md file has been created!")
-        }
+        }s
     })
 };
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+}
 
 // Function call to initialize app
-init();
-changes 
+init(); 
