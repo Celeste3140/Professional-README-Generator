@@ -5,7 +5,7 @@ const generateMarkdown = require('../Develop/utils/generateMarkdown');
 // const { default: Choices } = require('inquirer/lib/objects/choices');
 // TODO: Create an array of questions for user input
 
-inquirer.prompt ([
+const questions = [
     {
         type: "input",
         name: "title",
@@ -71,26 +71,30 @@ inquirer.prompt ([
     {
         type: "input",
         name: "contact",
-        message: "Best email to reach you!SS"
+        message: "Best email to reach you!"
     },
 
-]);
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
-    fs.writeFile("README.md",  err => {
+    fs.writeFile("README.md",   generateMarkdown(data), err => {
         if (err) {
             console.log(err);
             return console.log('Oops, something happened!');
         } else {
         console.log("README.md file has been created!")
-        }s
-    })
-};
+        }
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {
+    inquirer.prompt(questions).then 
+    (function (response) {
+        console.log(response);
+        writeToFile(`${response.title}.md`, response);
+    });
 }
-
 // Function call to initialize app
-init(); 
+init()

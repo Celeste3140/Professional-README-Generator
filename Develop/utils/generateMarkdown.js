@@ -47,7 +47,7 @@ function generateMarkdown(data) {
   ${data.Test}
 
   ## Contact 
-  ${contact}
+  ${data.contact}
 `;
 }
 
