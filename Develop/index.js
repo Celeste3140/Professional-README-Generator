@@ -1,9 +1,10 @@
 // TODO: Include packages needed for this application
 var inquirer = require('inquirer');
-const fs = require('fs'); 
-const { default: Choices } = require('inquirer/lib/objects/choices');
+const fs = require('fs');
+// const { default: Choices } = require('inquirer/lib/objects/choices');
 // TODO: Create an array of questions for user input
-const questions = [
+
+inquirer.prompt ([
     {
         type: "input",
         name: "title",
@@ -72,7 +73,7 @@ const questions = [
         message: "Best email to reach you!SS"
     },
 
-];
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
